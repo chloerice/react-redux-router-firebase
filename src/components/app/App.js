@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import './App.css'
 import pkg from '../../../package.json'
 
@@ -15,7 +15,9 @@ const onlyOneActiveMatch = (match, location) => {
 const App = props => (
   <div className='App'>
     <nav>
-      <h2 className='navbar-brand'>{pkg.name}</h2>
+      <Link to='/'>
+        <h2 className='navbar-brand'>{pkg.name}</h2>
+      </Link>
       <ul className='navbar'>
         <li className='navbar-item'>
           <NavLink to='/about' isActive={onlyOneActiveMatch}>About</NavLink>

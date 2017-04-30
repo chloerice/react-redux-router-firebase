@@ -25,6 +25,7 @@ nav {
 .navbar-brand {
   text-transform: capitalize;
   float: left;
+  color: #000000;
 }
 
 .navbar-item a {
