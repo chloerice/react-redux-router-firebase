@@ -36,5 +36,5 @@
     "boilerplate"
   ],
   "author": "YOUR_NAME_HERE",
-  "boilerplate-repos": "github.com/facebookincubator/create-react-app && github.com/chloerice/react-redux-router-fire"
+  "boilerplate-repos": "github.com/facebookincubator/create-react-app && github.com/chloerice/react-redux-router-firebase"
 }
