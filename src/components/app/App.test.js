@@ -1,24 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Container from './App'
 import Home from '../home/Home'
 import About from '../about/About'
-import Projects from '../projects/Projects'
-import Blog from '../blog/Blog'
+import store from '../../store'
 import '../../index.css'
 
 const App = () => (
-  <Router>
-    <Container>
-      <Switch>
-        <Route exact strict path='/' component={Home} />
-        <Route exact path='/about' component={About} />
-        <Route exact path='/projects' component={Projects} />
-        <Route exact path='/blog' component={Blog} />
-      </Switch>
-    </Container>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <Container>
+        <Switch>
+          <Route exact path='/about' component={About} />
+          <Route exact strict path='/' component={Home} />
+        </Switch>
+      </Container>
+    </Router>
+  </Provider>
 )
 
 it('renders without crashing', () => {
